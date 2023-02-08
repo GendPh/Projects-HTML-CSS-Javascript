@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: cornflowerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: #888;
+  min-width: 300px;
+  max-width: 800px;
+  border: 2px solid black;
+  border-radius: 30px;
+  position: relative;
+}
+.container .screen {
+  max-width: 100%;
+  padding: 30px;
+  background-color: white;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.container .screen h2 {
+  font-size: 4rem;
+}
+.container .screen h3 {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  font-size: 1rem;
+  padding: 5px;
+}
+#save-el{
+  color: #888;
+}
+.container .btn-menu {
+  margin: 10px;
+  display: grid;
+  grid-row: 5;
+  gap: 25px;
+  max-width: 100%;
+}
+.btn-menu .directData {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn-menu .directData #directData {
+  width: 70%;
+  height: 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+.btn-menu .directData #btn-directData {
+  width: 15%;
+  height: 80%;
+  background-color: darkgreen;
+  color: white;
+  border-radius: 20px;
+}
+.btn-menu button {
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  color: white;
+}
+.btn-menu button:hover {
+  opacity: 0.9;
+}
+.btn-menu button:active {
+  opacity: 1;
+}
+#btn-plusOne {
+  background-color: darkgreen;
+}
+#btn-removeOne {
+  background-color: darkred;
+}
+#btn-save {
+  background-color: darkcyan;
+}
+#btn-clear {
+  background-color: darkslateblue;
+}

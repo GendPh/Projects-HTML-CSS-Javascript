@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stone, Paper, Scissors</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <h1>Stone Paper Scissors</h1>
+  <div class="container">
+    <div class="pointsLabel">
+      <div class="pointsLabelShow">
+        <p>Player</p>
+        <div id="playerOnePoints">0</div>
+      </div>
+      <div id="rounds">
+        <p>Rounds</p>
+        <div id="roundsCount">0</div>
+      </div>
+      <div class="pointsLabelShow">
+        <p>PC</p>
+        <div id="pcPoints">0</div>
+      </div>
+    </div>
+    <div class="playerBoard" id="playerOneBoard">
+      <p>Player</p>
+      <button id="btnStone" aria-expanded="false" class="btn btn-stone"
+        onclick="playerChoice('btn-stone', 'stone')"></button>
+      <button id="btnPaper" aria-expanded="false" class="btn btn-paper"
+        onclick="playerChoice('btn-paper', 'paper')"></button>
+      <button id="btnScissors" aria-expanded="false" class="btn-scissors btn"
+        onclick="playerChoice('btn-scissors', 'scissors')"></button>
+      <button id="btnChosenPlayer" class="chosen" aria-expanded="false"></button>
+    </div>
+    <div class="display" id="display">
+      <p id="result">Chose</p>
+      <button id="resetGame" onclick="resetBoard('btn-stone','btn-paper','btn-scissors')">Reset Board</button>
+    </div>
+    <div class="pcBoard" id="pcOneBoard">
+      <p>Pc</p>
+      <button id="btnStonePc" class="btn btn-stone"></button>
+      <button id="btnPaperPc" class="btn btn-paper"></button>
+      <button id="btnScissorsPc" class="btn btn-scissors"></button>
+      <button id="btnChosenPc" class="chosen" aria-expanded="false"></button>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>

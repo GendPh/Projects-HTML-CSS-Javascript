@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  max-width: 500px;
+  background-color: #222;
+  padding: 2px;
+  display: grid;
+  gap: 1px;
+  border-radius: 10px;
+}
+#display {
+  color: rgba(250, 250, 250, 1);
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 5px;
+  font-size: 30px;
+  flex-direction: column;
+}
+#display .signal {
+  font-size: 20px;
+  font-weight: 900;
+  padding-right: 5px;
+  color: rgba(250, 250, 250, 0.7);
+}
+#display span {
+  position: relative;
+}
+#display span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(250, 250, 250, 1);
+  animation: fadeLowLine 0.5s linear infinite alternate;
+}
+
+@keyframes fadeLowLine {
+  from {
+    background-color: rgba(250, 250, 250, 1);
+  }
+  to {
+    background-color: rgba(250, 250, 250, 0.5);
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1px;
+}
+button {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border: 2px double #444;
+  outline: none;
+  background-color: #888;
+  cursor: pointer;
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+  transition: all 0.5s ease;
+}
+#lineOne button {
+  background-color: #555;
+}
+#lineOne button:hover {
+  background-color: #999;
+}
+#lineOne button:active {
+  background-color: #666;
+}
+#lineOne button:last-child {
+  background-color: rgba(249, 105, 14, 1);
+}
+#lineFive button:nth-child(2) {
+  width: 200px;
+  height: 100px;
+}
+#lineFive button:first-child {
+  border-radius: 0 0 0 8px;
+}
+#lineFive button:last-child {
+  border-radius: 0 0 8px 0;
+}
+div button:last-child {
+  background-color: rgba(249, 105, 14, 1);
+}
+div button:last-child:hover,
+#lineOne button:last-child:hover {
+  background-color: rgba(249, 105, 14, 0.8);
+}
+button:hover {
+  background-color: #999;
+}
+button:active {
+  background-color: #666;
+}
+@media (max-width: 768px) {
+  button {
+    width: 80px;
+  }
+  #lineFive button:nth-child(2) {
+    width: 160px;
+    height: 80px;
+  }
+}

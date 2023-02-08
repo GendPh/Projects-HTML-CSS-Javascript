@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicTacToe</title>
+  <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+  <h1>TicTacToe</h1>
+
+  <div id="userData" data-visible="true">
+    <div class="getUserData">
+      <table>
+        <thead>
+          <tr>
+            <td>Player One</td>
+            <td>Player two</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="playerOneData" id="playerOneData" placeholder="Player One"></td>
+            <td><input type="text" name="playerTwoData" id="playerTwoData" placeholder="Player Two"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><button id="btn-StartGame">Start Game</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <div id="boardDisplay" data-visible="false">
+    <div class="PlayerInfo">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Player One</th>
+            <th>Player Two</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td id="playerOneName"></td>
+            <td id="playerTwoName"></td>
+          </tr>
+          <tr>
+            <td>Points:</td>
+            <td id="playerOnePoints"></td>
+            <td id="playerTwoPoints"></td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td colspan="2" id="gameStatusLine"><span id="gameStatus"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="boardGame" id="BoardGameTicTacToe">
+      <div class="box" onclick="game(this)" id="boxOne"><div id="lineBoxOne" class="line"></div></div>
+      <div class="box" onclick="game(this)" id="boxTwo"><div id="lineBoxTwo" class="line"></div></div>
+      <div class="box" onclick="game(this)" id="boxThree"><div id="lineBoxThree" class="line"></div></div>
+      <div class="box" onclick="game(this)" id="boxFour"><div id="lineBoxFour" class="line"></div></div>
+      <div class="box" onclick="game(this)" id="boxFive"><div id="lineBoxFive" class="line"></div></div>
+      <div class="box" onclick="game(this)" id="boxSix"><div id="lineBoxSix" class="line"></div></div>
+      <div class="box" onclick="game(this)" id="boxSeven"><div id="lineBoxSeven" class="line"></div></div>
+      <div class="box" onclick="game(this)" id="boxEight"><div id="lineBoxEight" class="line"></div></div>
+      <div class="box" onclick="game(this)" id="boxNine"><div id="lineBoxNine" class="line"></div></div>
+    </div>
+    <div class="btnReset">
+      <button id="resetGameBtn">Reset Board</button>
+      <button id="resetPointsBtn">Reset Points</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

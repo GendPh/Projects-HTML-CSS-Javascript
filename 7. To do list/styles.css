@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #333;
+  height: 100vh;
+  padding: 10px;
+}
+.flex {
+  display: flex;
+}
+.flexCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+.todoList {
+  width: 800px;
+  max-width: 800px;
+  height: 80vh;
+  background-color: white;
+  border: 10px solid black;
+}
+.navbar {
+  width: 30%;
+  border-right: 5px solid black;
+  position: relative;
+  padding: 10px;
+}
+.navbar button {
+  position: absolute;
+  inset: 90% 10px 10px 10px;
+  border: 5px solid darkblue;
+  border-radius: 20px;
+  background-color: darkcyan;
+  color: darkgoldenrod;
+  font-weight: 900;
+  font-size: 2rem;
+  font-style: italic;
+}
+.container-list {
+  width: 70%;
+  overflow: hidden;
+}
+.onGoingTask,
+.completedTasks {
+  height: 78vh;
+  width: 100%;
+  overflow-y: scroll;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+.taskBody {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid darkblue;
+  background-color: #888;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.confirm {
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  border: 5px solid darkgreen;
+  background-image: url(./assets/check-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.confirm-waiting {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.cancel {
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  border: 5px solid darkred;
+  background-image: url(./assets/xmark-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.todoTask {
+  width: 50%;
+  font-size: 20px;
+  text-indent: 10px;
+  border-radius: 10px;
+  padding: 5px 0;
+}
+.textTask {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-style: italic;
+  color: darkgreen;
+}
+.timeTask {
+  font-size: 1rem;
+  font-weight: 900;
+  color: darkgreen;
+}
+.delete {
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  border: 2px solid darkblue;
+  background-image: url(./assets/trash-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+}

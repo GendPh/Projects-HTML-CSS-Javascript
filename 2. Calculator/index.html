@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+  <script src="https://kit.fontawesome.com/22aeb13e85.js" crossorigin="anonymous"></script>
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="calculator">
+    <div id="display">
+      <div class="sinal" id="signal"></div>
+      <span id="Text"></span>
+    </div>
+    <div id="lineOne" class="flex">
+      <button onclick="calculation(7)"><i class="fa-solid fa-c"></i></button>
+      <button onclick="calculation(8)">+/-</button>
+      <button onclick="calculation(6)"><i class="fa-solid fa-percent"></i></button>
+      <button onclick="calculation(4)"><i class="fa-solid fa-divide"></i></button>
+    </div>
+    <div id="lineTWo" class="flex">
+      <button onclick="getNumber(7)">7</button>
+      <button onclick="getNumber(8)">8</button>
+      <button onclick="getNumber(9)">9</button>
+      <button onclick="calculation(3)"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div id="lineThree" class="flex">
+      <button onclick="getNumber(4)">4</button>
+      <button onclick="getNumber(5)">5</button>
+      <button onclick="getNumber(6)">6</button>
+      <button onclick="calculation(2)"><i class="fa-solid fa-minus"></i></button>
+    </div>
+    <div id="lineFour" class="flex">
+      <button onclick="getNumber(1)">1</button>
+      <button onclick="getNumber(2)">2</button>
+      <button onclick="getNumber(3)">3</button>
+      <button onclick="calculation(1)"><i class="fa-solid fa-plus"></i></button>
+    </div>
+    <div id="lineFive" class="flex">
+      <button onclick="getNumber(0)">0</button>
+      <button onclick="addComma('.')">.</button>
+      <button onclick="calculation(5)"><i class="fa-solid fa-equals"></i></button>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>

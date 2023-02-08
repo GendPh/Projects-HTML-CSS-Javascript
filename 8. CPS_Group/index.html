@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cpsgroupe-Construit-Renove-Decore</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/22aeb13e85.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="primary-header" id="primary-header">
+      <div class="icon">
+        <span><a href="#">CPS</a></span>
+        <span><a href="#">GROUP</a></span>
+      </div>
+      <div class="primary-nav">
+        <ul>
+          <li><a href="#ContactUs">Contactez-nous</a></li>
+        </ul>
+      </div>
+      <button id="toggle-Nav" data-visible="false" aria-expanded="false" onclick="openNavbar()"></button>
+    </div>
+    <div role="contentinfo" class="secondary-header" id="secondary-header" aria-expanded="false">
+      <button id="secondaryToggle-Nav" data-visible="false" onclick="openNavbar()"></button>
+      <div class="secondary-nav">
+        <ul>
+          <li><a href="#ContactUs">Contactez-nous</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container" id="ContactUs">
+      <h1>Contactez-nous</h1>
+      <p>Site en cours de développement!</p>
+      <hr>
+      <div class="contactForm">
+        <div class="form">
+          <p>Les champs marqués d'un <span>*</span> sont obligatoires</p>
+          <form action="javascript:sendMail()">
+            <label for="firstName">Prénom <span>*</span></label>
+            <input type="text" name="firstName" id="firstName" onblur="validateFirstName(this)">
+            <label for="lastName">Nom de famille <span>*</span></label>
+            <input type="text" name="lastName" id="lastName" onblur="validateSecondName(this)">
+            <label for="userEmail">Email <span>*</span></label>
+            <input type="email" name="userEmail" id="userEmail" onblur="validateEmail(this)">
+            <label for="userPhone">Téléphone <span>*</span></label>
+            <input type="text" name="userPhone" id="userPhone" onblur="validatePhone(this)">
+            <label for="subject">Sujet <span>*</span></label>
+            <input type="text" name="subject" id="subject" onblur="validateSubject(this)">
+            <label for="userMessage">Texte <span>*</span></label>
+            <textarea name="userMessage" id="userMessage" cols="30" rows="10" onblur="validateMessage(this)"></textarea>
+            <button>Envoyer</button>
+          </form>
+        </div>
+        <div class="map">
+          <div id="googleMap"></div>
+          <div class="mapInfo" id="mapInfo" aria-expanded="false" role="contentinfo">
+            <div class="partOne">
+              <p>12 All. Lech Walesa</p>
+              <p>12 All. Lech Walesa, 77185 Lognes, France</p>
+              <p><a
+                  href="https://www.google.com/maps/place/12+All.+Lech+Walesa,+77185+Lognes,+France/@48.826688,2.626277,12z/data=!4m5!3m4!1s0x47e60f8db31b7c53:0x667c3bcdbb0bc893!8m2!3d48.8266881!4d2.6262767?hl=fr"
+                  title="Agrandir
+                  le plan" target="_blank">Agrandir
+                  le plan</a></p>
+            </div>
+            <div class="partTwo">
+              <p><a
+                  href="https://www.google.com/maps/dir//12+All.+Lech+Walesa+77185+Lognes+France/@48.8266881,2.6262767,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47e60f8db31b7c53:0x667c3bcdbb0bc893!2m2!1d2.6262767!2d48.8266881"
+                  title="Itinéraires" target="_blank">
+                  <i class="fa-solid fa-arrows-turn-to-dots"></i></a></p>
+              <p><a
+                  href="https://www.google.com/maps/dir//12+All.+Lech+Walesa+77185+Lognes+France/@48.8266881,2.6262767,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47e60f8db31b7c53:0x667c3bcdbb0bc893!2m2!1d2.6262767!2d48.8266881"
+                  title="Itinéraires" target="_blank">Itinéraires</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <p>- Ici pour vous -</p>
+      <p>Appelez-nous. Nous sommes là pour vous soutenir:</p>
+      <p>Numb: 06 35 39 50 63</p>
+    </div>
+    <div>
+      <p>- Où nous trouver -</p>
+      <p>Venez nous rendre visite:</p>
+      <p>12, Allée Lech Walesa 77185 Lognes</p>
+    </div>
+    <div>
+      <p>- On reste en contact -</p>
+      <p>
+        <a href="https://www.facebook.com/CPSGroupe" target="_blank" title="facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/pedrosilva6572/" target="_blank" title="instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </p>
+    </div>
+  </footer>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK_qymSkZtmsuSweSvbb2qjXWQtzabLyA&map_ids=5ae336b63c3f0f62&libraries=places"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
