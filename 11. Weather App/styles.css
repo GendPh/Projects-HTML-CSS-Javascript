@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(./assets/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  /* background: rgb(80, 60, 195);
+  background: linear-gradient(
+    180deg,
+    rgba(80, 60, 195, 1) 40%,
+    rgba(0, 0, 0, 1) 63%
+  ); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  min-height: 500px;
+  position: relative;
+}
+
+#temperature-min {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+
+  width: 70px;
+  aspect-ratio: 1/1;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid gray;
+  border-radius: 50%;
+
+  font-weight: bolder;
+  font-size: 1.1rem;
+  text-align: center;
+}
+#temperature-max {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+
+  width: 70px;
+  aspect-ratio: 1/1;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid gray;
+  border-radius: 50%;
+
+  font-weight: bolder;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+#temperature {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100px;
+  aspect-ratio: 1/1;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid gray;
+  border-radius: 50%;
+
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+#place {
+  position: absolute;
+  top: 38%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  color: white;
+}
+
+#description {
+  position: absolute;
+  top: 65%;
+  left: 5px;
+  right: 5px;
+  text-align: justify;
+  font-size: 1rem;
+  color: white;
+}
+
+#week {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  max-height: 130px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  padding: 0 10px;
+}
+#week::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+.week-content {
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 1rem;
+}
+
+.week-content div:last-child {
+  flex-direction: column;
+}
+.week-content div:last-child span {
+  width: 150px;
+  text-align: right;
+}
+
+.week-content:last-child {
+  border-bottom: none;
+}
