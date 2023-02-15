@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/404abb22f8.js" crossorigin="anonymous"></script>
+
+  <title>Weather</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-bar">
+      <button><i class="fa-solid fa-wind"></i></button>
+      <button><i class="fa-solid fa-cloud-sun-rain"></i></button>
+      <button><i class="fa-solid fa-city"></i></button>
+      <button><i class="fa-solid fa-map"></i></button>
+      <button><i class="fa-solid fa-sliders"></i></button>
+    </div>
+    <div class="main-content">
+
+      <div class="search-bar">
+        <input type="text" name="searchCities" id="searchCities" placeholder="Search for cities">
+      </div>
+
+
+      <div class="main-weather">
+        <div class="dGrid-textCenter city-name"></div>
+        <div class="dGrid-textCenter rain-perc">
+          <p>Chance of rain: <span id="changeOfRain"></span>%</p>
+        </div>
+        <div class="dGrid-textCenter real-temperature"></div>
+        <div class="icon-temperature"></div>
+      </div>
+
+
+      <div class="forecast">
+        <div class="text">
+          <p>TODAY'S FORECAST</p>
+        </div>
+        <div class="forecast-day" id="forecast-day1">
+          <div class="forecast-day-hour">6:00 AM</div>
+          <div class="forecast-day-icon"></div>
+          <div class="forecast-day-temperature"></div>
+        </div>
+        <div class="forecast-day" id="forecast-day2">
+          <div class="forecast-day-hour">9:00 AM</div>
+          <div class="forecast-day-icon"> </div>
+          <div class="forecast-day-temperature"></div>
+        </div>
+        <div class="forecast-day" id="forecast-day3">
+          <div class="forecast-day-hour">12:00 PM</div>
+          <div class="forecast-day-icon"> </div>
+          <div class="forecast-day-temperature"></div>
+        </div>
+        <div class="forecast-day" id="forecast-day4">
+          <div class="forecast-day-hour">15:00 PM</div>
+          <div class="forecast-day-icon"></div>
+          <div class="forecast-day-temperature"></div>
+        </div>
+        <div class="forecast-day" id="forecast-day5">
+          <div class="forecast-day-hour">18:00 pM</div>
+          <div class="forecast-day-icon"> </div>
+          <div class="forecast-day-temperature"></div>
+        </div>
+        <div class="forecast-day" id="forecast-day6">
+          <div class="forecast-day-hour">21:00 PM</div>
+          <div class="forecast-day-icon"></div>
+          <div class="forecast-day-temperature"></div>
+        </div>
+      </div>
+
+
+      <div class="air-conditions">
+        <div class="text">
+          <p>
+            AIR CONDITIONS
+          </p>
+        </div>
+
+        <div class="wind">
+          <div class="dGrid-textCenter wind-icon"><i class="fa-solid fa-wind"></i></div>
+          <div class="dGrid-textCenter wind-description">Wind</div>
+          <div class="dGrid-textCenter wind-value"></div>
+        </div>
+        <div class="uv-index">
+          <div class="dGrid-textCenter uv-index-icon"><i class="fa-solid fa-sun"></i></div>
+          <div class="dGrid-textCenter uv-index-description">UV-Index</div>
+          <div class="dGrid-textCenter uv-index-value"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="extra-days">
+      <div class="days">
+        <div class="text">
+          <p>
+            7-DAY FORECAST
+          </p>
+        </div>
+        <div class="day" id="day1">
+          <div class="day-name">Today</div>
+          <div class="icon-description">
+            <div class="icon-description-icon"></div>
+            <div class="icon-description-description"></div>
+          </div>
+          <div class="temp-minmax"></div>
+        </div>
+        <div class="day" id="day2">
+          <div class="day-name"></div>
+          <div class="icon-description">
+            <div class="icon-description-icon"> </div>
+            <div class="icon-description-description"></div>
+          </div>
+          <div class="temp-minmax"> </div>
+        </div>
+        <div class="day" id="day3">
+          <div class="day-name"></div>
+          <div class="icon-description">
+            <div class="icon-description-icon"> </div>
+            <div class="icon-description-description"></div>
+          </div>
+          <div class="temp-minmax"> </div>
+        </div>
+        <div class="day" id="day4">
+          <div class="day-name"></div>
+          <div class="icon-description">
+            <div class="icon-description-icon"> </div>
+            <div class="icon-description-description"></div>
+          </div>
+          <div class="temp-minmax"> </div>
+        </div>
+        <div class="day" id="day5">
+          <div class="day-name"></div>
+          <div class="icon-description">
+            <div class="icon-description-icon"> </div>
+            <div class="icon-description-description"></div>
+          </div>
+          <div class="temp-minmax"> </div>
+        </div>
+        <div class="day" id="day6">
+          <div class="day-name"></div>
+          <div class="icon-description">
+            <div class="icon-description-icon"> </div>
+            <div class="icon-description-description"></div>
+          </div>
+          <div class="temp-minmax"> </div>
+        </div>
+        <div class="day" id="day7">
+          <div class="day-name"></div>
+          <div class="icon-description">
+            <div class="icon-description-icon"> </div>
+            <div class="icon-description-description"></div>
+          </div>
+          <div class="temp-minmax"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./function.js"></script>
+</body>
+
+</html>
