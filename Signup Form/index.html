@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div id="menu-btn">
+      <button class="btn-active" id="btn-register">Register</button>
+      <button class="btn-disable" id="btn-login">Log In</button>
+    </div>
+    <div class="active" id="form-register">
+      <h2 class="title">Register</h2>
+      <form action="" method="post">
+        <div class="form-register-name">
+          <div class="field-hover">
+            <input type="text" name="fname-register" required>
+            <label for="fname-register">First Name <span>*</span></label>
+          </div>
+          <div class="field-hover">
+            <input type="text" name="lname-register" required>
+            <label for="lname-register">Last Name <span>*</span></label>
+          </div>
+        </div>
+        <div class="form-register-email">
+          <div class="field-hover">
+            <input type="text" name="email-register" required>
+            <label for="email-register">Email <span>*</span></label>
+          </div>
+        </div>
+        <div class="form-register-password">
+          <div class="field-hover">
+            <input type="password" name="password-register" required>
+            <label for="password-register">Set a password <span>*</span></label>
+          </div>
+        </div>
+        <input type="submit" class="btn-active" value="GET STARTED">
+      </form>
+    </div>
+    <div class="disable" id="form-login">
+      <h2 class="title">Log In</h2>
+      <form action="" method="post">
+        <div class="form-login-name">
+          <div class="field-hover">
+            <input type="text" name="fname-login" required>
+            <label for="fname-login">First Name <span>*</span></label>
+          </div>
+          <div class="field-hover">
+            <input type="text" name="lname-login" required>
+            <label for="lname-login">Last Name <span>*</span></label>
+          </div>
+        </div>
+        <div class="form-login-email">
+          <div class="field-hover">
+            <input type="text" name="email-login" required>
+            <label for="email-login">Email <span>*</span></label>
+          </div>
+        </div>
+        <div class="form-login-password">
+          <div class="field-hover">
+            <input type="password" name="password-login" required>
+            <label for="password-login">Insert password <span>*</span></label>
+          </div>
+        </div>
+        <input type="submit" class="btn-active" value="Log In">
+      </form>
+    </div>
+  </div>
+
+  <script src="./function.js"></script>
+</body>
+
+</html>
