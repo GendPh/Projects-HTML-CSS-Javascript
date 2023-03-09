@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/22aeb13e85.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="title d-flex">
+      <span>Quiz App</span>
+      <img src="./assets/proflisepic.jpeg" alt="profile pic" title="profile pic">
+    </div>
+    <div class="profile-info">
+      <table>
+        <thead>
+          <th>Count</th>
+          <th>Ranking</th>
+        </thead>
+        <tbody></tbody>
+        <tr>
+          <td>230</td>
+          <td>1250</td>
+        </tr>
+      </table>
+    </div>
+    <div class="topics d-flex">
+      <div class="topic-description d-flex available" onclick="show_data('docker',0)">
+        <img src="./assets/docker-svgrepo-com.svg" alt="anime pic">
+        <p>Docker</p>
+      </div>
+      <div class="topic-description d-flex unavailable">
+        <img src="./assets/linux-svgrepo-com.svg" alt="anime pic">
+        <p>Linux</p>
+      </div>
+      <div class="topic-description d-flex unavailable">
+        <img src="./assets/sql-svgrepo-com.svg" alt="anime pic">
+        <p>SQL</p>
+      </div>
+      <div class="topic-description d-flex unavailable">
+        <img src="./assets/bash-svgrepo-com.svg" alt="anime pic">
+        <p>Bash</p>
+      </div>
+    </div>
+    <div class="question-panel d-none">
+      <div class="topic-description available d-flex">
+        <img src="./assets/1390px-Anime_stub.svg.png" alt="anime pic">
+        <p>Docker</p>
+      </div>
+      <div class="timer">
+        <p>Quiz: <span id="length-question"></span> <span id="count-down">03:00 min</span></p>
+      </div>
+      <div class="question">
+        <span id="question-number">1.</span> <span id="question"></span>
+      </div>
+      <div class="answers d-flex">
+      </div>
+    </div>
+    <div class="score d-none">
+      <div class="btn-close"></div>
+      <div class="score-container">
+        <img src="./assets/trophy-svgrepo-com.svg" alt="trophy" title="trophy">
+        <h3>Congrats!</h3>
+        <h2 id="final-score"></h2>
+        <p>Quiz completed successfully.</p>
+        <p>You attempt <span id="questions-answered"></span> and form that <span id="answer-correct"></span> are
+          correct.</p>
+
+        <p class="d-flex">Share with us:
+          <span><i class="fa-brands fa-square-instagram"></i></span>
+          <span><i class="fa-brands fa-facebook"></i></span>
+          <span><i class="fa-brands fa-square-whatsapp"></i></span>
+        </p>
+      </div>
+    </div>
+
+
+    <button id="btn-upgrade" class="">UPGRADE</button>
+    <button id="btn-submit" class="d-none">SUBMIT</button>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
